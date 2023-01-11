@@ -2,7 +2,13 @@
 </script>
 
 <template>
-  <header> <h1>bryan</h1></header>
+  <header> 
+    <h1>Pokedex F5</h1>
+    <img src="../assets/img/ash-logo.png" alt="logo-ash">
+  
+  
+  
+  </header>
 
 
   <main>
