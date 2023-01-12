@@ -1,20 +1,29 @@
 <script setup>
-import { usePokemonStore } from '../stores/PokemonStore';
-import { onBeforeMount } from 'vue';
-
+import { usePokemonStore } from "../stores/PokemonStore";
+const props = defineProps({
+  id: {
+    type: Number,
+    default: null,
+  },
+  img: {
+    type: String,
+    default: null,
+  },
+  name: {
+    type: String,
+    default: null,
+  },
+  stats: {
+    type: String,
+    default: null,
+  },
+});
 const showPokemon = usePokemonStore();
-
-onBeforeMount(()=>{
-  getCharacter();
-})
-const getCharacter = async ()=>{
-  await showPokemon.fetchPokemons()
-}
-
-
 </script>
 <template>
-
+  
+      <p>{{ name }}</p>
+   
+ 
 </template>
-<style scoped>
-</style>
+<style scoped></style>
