@@ -1,12 +1,17 @@
 <script setup>
 import CardComponent from "../components/CardComponent.vue";
 import { usePokemonStore } from "../stores/PokemonStore";
+import { usePokemonFeaturesStore } from "../stores/featuresPokemon";
 import { onBeforeMount } from "vue";
 
 const store = usePokemonStore();
+const storeFeatures = usePokemonFeaturesStore();
 onBeforeMount(async () => {
   await store.fetchPokemons();
+  await storeFeatures.fetchPokemonsFeatures();
 });
+
+
 </script>
 
 <template>
@@ -24,7 +29,9 @@ onBeforeMount(async () => {
       >
         <CardComponent
           :name="pokemon.name"
-        />
+        >
+      </CardComponent>
+    
       </div>
     </div>
   </main>

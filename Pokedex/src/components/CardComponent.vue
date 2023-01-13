@@ -1,11 +1,10 @@
 <script setup>
-import { usePokemonStore } from "../stores/PokemonStore";
 const props = defineProps({
   id: {
     type: Number,
     default: null,
   },
-  img: {
+  url: {
     type: String,
     default: null,
   },
@@ -13,17 +12,14 @@ const props = defineProps({
     type: String,
     default: null,
   },
-  stats: {
-    type: String,
-    default: null,
-  },
+
 });
-const showPokemon = usePokemonStore();
+
 </script>
 <template>
   
       <p>{{ name }}</p>
-   
+       <p>{{ id }}</p> 
  
 </template>
 <style scoped></style>
