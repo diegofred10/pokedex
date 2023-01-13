@@ -1,12 +1,28 @@
 <script setup>
+const props = defineProps({
+  id: {
+    type: Number,
+    default: null,
+  },
+  url: {
+    type: String,
+    default: null,
+  },
+  name: {
+    type: String,
+    default: null,
+  },
+
+});
+
 </script>
 <template>
-<li>
+  <li>
     <figure>
       <img src="../assets/img/charizard.png" alt="name">
     </figure>
     <div class="contentPokemon">
-      <p><strong>v-bind: </strong></p>
+      <p><strong>{{ name }}</strong></p>
       <h3>Fuego</h3>
       <p><strong>#6</strong></p>
     </div>
