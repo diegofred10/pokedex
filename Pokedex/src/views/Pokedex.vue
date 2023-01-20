@@ -20,8 +20,8 @@ onBeforeMount(async () => {
   </header>
 
   <main>
-    <section>
-      <NavComponent></NavComponent>
+    <NavComponent></NavComponent>
+      <section>
       <h2>HAZTE CON TODOS!</h2>
       <div class="content">
         <div
